@@ -1,0 +1,165 @@
+16) Mention how to insert a new node in linked list where free node will be available?
+
+To insert a new node in linked list the free node will be available in Avail list.//avail list is the list of free nodes in the memory
+
+17) Mention for which header list, you will found the last node contains the null pointer?
+
+For grounded header list you will found the last node contains the null pointer.
+===================================================================================================================================================================================
+
+1) Mention what is Linked lists?
+
+A linked list is a data structure that can store a collection of items. In other words, linked lists can be utilized to store several objects of the same type. 
+Each unit or element of the list is referred as a node. Each node has its own data and the address of the next node. It is like a chain. Linked Lists are used to create graph 
+and trees.
+
+2) What type of memory allocation is referred for Linked lists?
+
+Dynamic memory allocation is referred for Linked lists.
+
+3) Mention what is traversal in linked lists?
+
+Term Traversal is used to refer the operation of processing each element in the list.
+
+4) Describe what is Node in link list? And name the types of Linked Lists?
+
+Together (data + link) is referred as the Node.
+
+
+
+Types of Linked Lists are,
+
+Singly Linked List
+Doubly Linked List
+Multiply Linked List
+Circular Linked List
+5) Mention what is Singly Linked list?
+
+Singly Linked list are a type of data structure.  In a singly linked list, each node in the list stores the contents of the node and a reference or pointer to the next node in the list.  It does not store any reference or pointer to the previous node.
+
+7hp0o
+
+6) Mention what is the difference between Linear Array and Linked List?
+
+The difference between Linear Array and Linked List are shown below,
+
+Linear Array	Linked List
+Deletion and Insertions are difficult.
+Deletion and Insertions can be done easily.
+For insertion and deletion, it needs movements
+For insertion and deletion, it does not require movement of nodes
+In it space is wasted
+In it space is not wasted
+It is expensive
+It is not expensive
+It cannot be reduced or extended according to requirements
+It can be reduced or extended according to requirements
+To avail each element same amount of time is required.
+To avail each element different amount of time is required.
+In consecutive memory locations elements are stored.
+Elements may or may not be stored in consecutive memory locations
+We can reach there directly if we have to go to a particular element
+To reach a particular node, you need to go through all those nodes that come before that node.
+7) Mention what are the applications of Linked Lists?
+
+Applications of Linked Lists are,
+
+Linked lists are used to implement queues, stacks, graphs, etc.
+In Linked Lists you don’t need to know the size in advance.
+Linked lists let you insert elements at the beginning and end of the list.
+8) What does the dummy header in linked list contain?
+
+In linked list, the dummy header contains the first record of the actual data
+
+9) Mention the steps to insert data at the starting of a singly linked list?
+
+Steps to insert data at the starting of a singly linked list include,
+
+Create a new node
+Insert new node by allocating the head pointer to the new node next pointer
+Updating the head pointer to the point the new node.
+Node *head;
+
+void InsertNodeAtFront(int data)
+
+{
+
+/* 1. create the new node*/
+
+Node *temp = new Node;
+
+temp->data = data;
+
+/* 2. insert it at the first position*/
+
+temp->next = head;
+
+/* 3. update the head to point to this new node*/
+
+head = temp;
+
+}
+10) Mention what is the difference between singly and doubly linked lists?
+
+A doubly linked list nodes contain three fields:
+
+An integer value and
+Two links to other nodes
+one to point to the previous node and
+other to point to the next node.
+Whereas a singly linked list contains points only to the next node.
+
+11) Mention what are the applications that use Linked lists?
+
+Both queues and stacks are often implemented using linked lists.  Other applications are list, binary tree, skip, unrolled linked list, hash table, etc.
+
+
+12) Explain how to add an item to the beginning of the list?
+
+To add an item to the beginning of the list, you have to do the following:
+
+Create a new item and set its value
+Link the new item to point to the head of the list
+Set the head of the list to be our new item
+If you are using a function to do this operation, you need to alter the head variable. To do this, you must pass a pointer to the pointer variable (a double pointer).
+so you will be able to modify the pointer itself.
+
+13) Mention what is the biggest advantage of linked lists?
+
+The biggest benefit of linked lists is that you do not specify a fixed size for your list. The more elements you add to the chain, the bigger the chain gets.
+
+14) Mention how to delete first node from singly linked list?
+
+To delete first node from singly linked list
+
+Store Current Start in Another Temporary Pointer
+Move Start Pointer One position Ahead
+Delete temp i.e Previous Starting Node as we have Updated Version of Start Pointer
+15) Mention how to display Singly Linked List from First to Last?
+
+To display Singly Linked List from First to Last,
+
+Create a linked list using create().
+You cannot change the address stored inside global variable “start” therefore you have to declare one temporary variable -“temp” of type node
+To traverse from start to end, you should allot address of Starting node in Pointer variable i.e temp.
+struct node *temp;  //Declare temp
+
+temp = start;       //Assign Starting Address to temp
+If the temp is NULL then you can say that last node is reached.
+
+while(temp!=NULL)
+
+{
+
+printf("%d",temp->data);
+
+temp=temp->next;
+
+}
+16) Mention how to insert a new node in linked list where free node will be available?
+
+To insert a new node in linked list the free node will be available in Avail list.
+
+17) Mention for which header list, you will found the last node contains the null pointer?
+
+For grounded header list you will found the last node contains the null pointe
