@@ -1,0 +1,53 @@
+Q1: Explain why Stack is a recursive data structure  Related To: Data Structures
+Add to PDF Entry 
+Answer
+A stack is a recursive data structure, so it's:
+a stack is either empty or
+it consists of a top and the rest which is a stack by itself;
+Source: www.cs.cmu.edu   
+ 
+Q2: Define Stack  Related To: Data Structures
+Add to PDF Entry 
+Answer
+A Stack is a container of objects that are inserted and removed according to the last-in first-out (LIFO) principle. In the pushdown stacks only two operations are allowed: push the item into the stack, and pop the item out of the stack.
+There are basically three operations that can be performed on stacks. They are:
+inserting an item into a stack (push).
+deleting an item from the stack (pop).
+displaying the contents of the stack (peek or top).
+A stack is a limited access data structure - elements can be added and removed from the stack only at the top. push adds an item to the top of the stack, pop removes the item from the top. A helpful analogy is to think of a stack of books; you can remove only the top book, also you can add a new book on the top.
+
+
+Source: www.cs.cmu.edu   
+ 
+Q3: Why and when should I use Stack or Queue data structures instead of Arrays/Lists?  Related To: Queues, Data Structures
+Add to PDF Junior 
+Answer
+Because they help manage your data in more a particular way than arrays and lists. It means that when you're debugging a problem, you won't have to wonder if someone randomly inserted an element into the middle of your list, messing up some invariants.
+Arrays and lists are random access. They are very flexible and also easily corruptible. If you want to manage your data as FIFO or LIFO it's best to use those, already implemented, collections.
+More practically you should:
+Use a queue when you want to get things out in the order that you put them in (FIFO)
+Use a stack when you want to get things out in the reverse order than you put them in (LIFO)
+Use a list when you want to get anything out, regardless of when you put them in (and when you don't want them to automatically be removed).
+Source: stackoverflow.com   
+ 
+Q4: Why Are Stacks Useful?  
+Add to PDF Junior 
+Answer
+They’re very useful because they afford you constant time O(1) operations when inserting or removing from the front of a data structure. One common use of a stack is in compilers, where a stack can be used to make sure that the brackets and parentheses in a code file are all balanced, i.e., have an opening and closing counterpart. Stacks are also very useful in evaluating mathematical expressions.
+Source: medium.com   
+ 
+Q5: How to implement Linked List Using Stack?  Related To: Linked Lists
+Add to PDF Junior 
+Answer
+You can simulate a linked list by using two stacks. One stack is the "list," and the other is used for temporary storage.
+To add an item at the head, simply push the item onto the stack.
+To remove from the head, pop from the stack.
+To insert into the middle somewhere, pop items from the "list" stack and push them onto the temporary stack until you get to your insertion point. Push the new item onto the "list" stack, then pop from the temporary stack and push back onto the "list" stack. Deletion of an arbitrary node is similar.
+This isn't terribly efficient, by the way, but it would in fact work.
+============================================================================================================================================================================
+Discuss how to implement queue using stack.
+A queue can be implemented by using 2 stacks:-
+1. An element is inserted in the queue by pushing it into stack 1
+2. An element is extracted from the queue by popping it from the stack 2
+3. If the stack 2 is empty then all elements currently in stack 1 are transferred to stack 2 but in the reverse order
+4. If the stack 2 is not empty just pop the value from stack 2.
